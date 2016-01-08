@@ -1,11 +1,29 @@
-@color: red;
+@color: #369;
+
+
+.sombrear(@top,@left,@blur:5px,@color:gray) {
+	box-shadow: @top @left @blur @color;
+	border: 2px solid;
+	margin: 20px;
+}
 
 h1 {
-	background: red;
-	color: white;
+	background: @color;
+	color: lighten(@color, 40%);
+
 }
 
 p {
-	background: red;
+	background: @color;
 	color: white;
+}
+
+div {
+	border: 2px solid;
+	h1 {
+		.sombrear(5px,5px);
+	}
+	p {
+		color: white;
+	}
 }
