@@ -1,0 +1,143 @@
+
+Aula 4
+
+Temas gratuitos de Bootstrap:
+https://shapebootstrap.net/free-templates
+
+Você pode personalizar seu Boostrap pelo site mesmo:
+http://getbootstrap.com/customize/
+
+Você pode personalizar seu Boostrap também pelo o arquivo pré-compilado LESS e depois compila para CSS. Basta pegar no GIT.
+
+Para fazer uma rápida prototipação, Bootstrap é indicado.
+
+normalize.css = A modern, HTML5-ready alternative to CSS resets. Gridsystem com 16 colunas.
+
+Grid System - utilizado para posicionar os elementos na tela. O Bootstrap tem o Grid System dele. No Bootstrap, o GridSystem funciona com 12 colunas.
+Cada linha é um ROW -> <div class="row">
+
+Bootstrap:
+col-xs ->   0 a 320   (celular)
+col-sm -> 320 a 786   (tablet)
+col-md -> 786 a 992   (desktop)
+col-lg -> maior 1200  (TV)
+
+Normalmente deve ser criada uma DIV para colocar o COL-MD-4. Eventualmente, voce pode aproveitar uma tag para colocar o COL-XX-YY, p.e., FORM.
+
+A maior crítica ao Bootstrap é a multiplicação de DIVs no código do seu FrontEnd.
+
+ECMAScript - ES5 - é o nome oficial da especificação do vulgo JavaScript.
+
+V8 - Máquina Virtual de interpretar JavaScript criada para o Chrome em 2009. Usada como base para o Node.js. A proposta do V8 é acelerar o desempenho de uma aplicação compilando o código Javascript para o formato nativo de máquina antes de executá-lo, permitindo que rode a velocidade de um código binário compilado.
+
+JavaScript pode ser programada em 3 paradigmas: 
+1) Procedural
+2) Orientada a Objetos
+3) Funcional
+
+JavaScript no Chrome:
+F12 > Console 
+
+JavaScript nao achado no Chrome:
+F12 > Network (destaque em vermelho)
+
+Não coloque JavaScript com a tag <script> dentro do <HEAD>. Porque isso irá bloquear a carga da página até a execução do script. Coloque no final do <BODY>, antes do </BODY>.
+
+CamelCase (JavaScript) vs. SnakeCase (Python)
+Ex: variavelNumeroLegal	vs. variavel_numero_legal
+
+Como escrever no log?
+console.log ("oi");
+
+HTML5Shiv is a JavaScript workaround, created by Sjoerd Visscher, to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9, which do not allow unknown elements to be styled without JavaScript.
+
+O Flavio escreve os scripts dele em ECMAScript6 e usa um transpiler para o ECMAScript5.
+
+Tag <OUTPUT> - outra novidade HTML5.
+
+Escreva no console do Chrome para acessar o DOM:
+document
+
+getElementById é obsoleto.
+
+
+HTML     <-> JavaScript 
+---------------------------
+Página   <-> document
+Tag    	 <-> element
+Atributo <-> propriedade
+
+
+Como converter uma função do CSS para uma propriedade JavaScript?
+h2.style.backgroundColor="red"
+
+
+Acoplamento ruim (obsoleto) :
+EX: 
+<h2 id="historia" onclick="trocaCor();" >
+
+vs.
+
+JavaScript Não-Obstrusivo
+EX: 
+function trocaCor() {
+	alert("Troquei");
+}
+var h2 = document.querySelector("#historia");
+h2.onclick=trocaCor; 
+
+
+Para buscar por ID, use querySelector.
+Para buscar por outros, use querySelectorAll.
+
+Existe o evento OnChange para pegar mudanças.
+Um outro mais poderoso e mais novo é o novo oninput (pega por exemplo mudanças até via DOM).
+Ex: quantidadeElemento.oninput ....
+
+
+Module Pattern em JS -> evitar uso de variáveis globais.
+
+
+Brincadeira no Site da Amazon:
+Selecione um produto e escreva na Console:
+document.querySelector("#priceblock_ourprice").textContent = "R$ 1,99";
+
+
+Analista Sênior de Front-End em SP estaria ganhando mais que em Back-End, em torno de R$ 8K.
+
+
+
+O JQuery é uma biblioteca que já te oferece uma série de funções para abstrair o DOM e sua manipulação que varia entre os navegadores, adicionando uma camada para o programador, livrando-o de detalhes de compatibilidade. A contrapartida é aprender a linguagem dele.
+
+jQuery is a JavaScript Library.
+jQuery greatly simplifies JavaScript programming.
+jQuery is easy to learn.
+
+Qual a diferença do JQuery 1.x e 2.x ?
+A versão 1.x dá suporte aos navegadores antigos. A versão 2.x é a partir do IE9.
+Portanto, para ter mais compatibilidade, baixe a versão 1.x.
+
+JQuery.JS deve ser importado sempre antes na página HTML.
+
+$ -> função seletora do JQuery
+
+Browser Diet.
+https://browserdiet.com/pt/
+
+Exemplos de JQuery: 
+$("li").text("Oi");
+$("footer").addClass("container");
+$("footer").removeClass("container");
+$("footer").toggleClass("container");
+$(".paineis").toggle();
+$(".paineis").hide();
+$(".paineis").show();
+
+
+
+
+
+
+
+
+

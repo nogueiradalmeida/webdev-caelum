@@ -1,0 +1,135 @@
+Tipos de Seletores por:
+1) Tag (mais abrangente)
+	- ex: h1 {}
+2) Hierarquia (acumula)
+	- ex: div h1 {}
+3) Id (não pode ser repetido)
+	- ex: #rodape p {}
+4) Classe (por grupo, reutilizável)
+	- ex: .carnaval {}
+5) Atributo
+	- ex: input[type=search] { }
+	- ex: [src=logo.png] {}
+6) Irmãos (seleciona os irmãos após a tag definida)
+	- ex: h2~p { }
+7) Irmão adjacente 
+	- ex: h2+p { }
+8) Filho Direto
+	- ex: article>h1 { }
+9) Negação
+	- ex: p:not(.especial) { }
+10) Pseudo-Classes (falsas classes)
+	- ex: li:first-child { }
+	- ex: li:last-child { }
+	- ex: li:nth-child(3) { }   /* seleciona a 3a. */
+	- ex: li:nth-child(2n) { }   /* seleciona os pares */
+	- ex: p:first-line { }
+	- ex: p:first-letter { }
+	- ex: a:visited { }
+	- ex: p:hover { }
+	- ex: li:before { content: '*'; }
+ 
+Selecionando Múltiplos seletores: basta usar vírgula.
+ex:	.busca, .menu {}    /* ele irá aplicar o estilo para as classes busca e menu */
+
+Como fazer o objeto rejeitar fica ao lado de float?
+clear: left
+
+Como melhorar a indexação pelo Google do seu logo? [Image Replacement]
+Ao invés de usar a <img>, escolha usar no <h1> o texto da empresa e coloque no o logo da empresa como background via CSS.
+
+A tag <span> é burra, inline, apenas para estruturar e permitir uso de classes.
+
+
+Site com símbolos úteis:
+http://www.alanwood.net/unicode/dingbats.html
+
+O Canvas tomou um pouco o lugar do Flash para desenhos vetoriais.
+
+Google Analytics te dá noção do seu público e seus navegadores. A Google suporta apenas as duas últimas versões de cada browser. O Flávio suporta as 3 últimas.
+
+Chocolatey - ferramenta (tipo apt-get) de gerenciamento de pacote para Windows.
+Homebrew  - ferramenta (tipo apt-get) de gerenciamento de pacote para MacOS.
+
+Exemplo de firulas CSS:
+<h1>VASCO</h1>
+
+h1 {
+  border: solid 2px;
+  padding: 80px;
+  margin: 50px;
+  display: inline-block;
+  border-radius: 25px 150px 5px 70px;
+  text-shadow: 5px 5px 10px gray, -50px -50px 10px white, -20px -20px 10px red;
+  box-shadow: inset 5px 5px 10px gray;
+  background: rgba(255,255,200,0.6);
+  /* opacity: 0.5; */
+  transition: 0.5s;
+}
+h1:hover {
+  /*
+  transform: scale(2.5)  rotate(720deg);
+  transition: 1.0s;*/
+  transform: rotate(180deg);
+  margin-left:300px;
+  transition:margin-left 5s;
+}
+
+---------------------------------------
+
+Cálculo de Seletores:
+.x.y p a p #x { }   -->>  cálculo: 123  (1=id + 2=classes + 3=tags)
+
+
+Se você não está conseguindo aumentar o cálculo de especificidade, existe o indesejável recurso "!important", mas você perde o controle.
+Ex: 
+p {
+	color: red !important;
+}
+
+Um recurso ainda mais extremo: colocar o atributo style direto na tag, que tem especifidade mais alta (1000).
+
+Pseudo-class conta como uma especifidade a mais.
+Ex:
+h1:hover { }  --->> Cálculo: 2
+
+
+Na Caelum, eles buscam fazer cada página em até 120KBytes.
+
+
+Ferramenta para gerar Gradiente em CSS:
+http://www.colorzilla.com/gradient-editor/
+
+
+** Iniciando Design Responsivo
+
+[Media Type] Você pode definir um CSS específico para a impressão do seu site.
+<link rel="" href="base.css">
+<link rel="" href="imp.css" media="print">  <!-- retira imagem e formata fonte para impressao a partir do css anterior -->
+<link rel="" href="fix.css" media="handheld">
+
+Estratégias: DesktopFirst (provável no legado) vs. MobileFirst (muito mais fácil, bom para novos projetos)
+
+MediaQuery - cada dispositivo do mercado tem uma específica. Mais é pouco prático fazer assim. É melhor usando um range.
+
+Os atributos max-width (até X, mais usado no DesktopFirst) e min-width (menor que X, mais usado no MobileFirst) podem ser utlizados na tag link para referenciar o CSS.
+Ex: <link rel="" href="mobile.css" media="screen and max-width=320px">
+
+O problema é que a max-width / min-width estão associadas a resolução e não ao tamanho físico da tela.
+Uma forma de contornar é usar a tag meta para definir a ViewPort que todo mobile tem.
+Ex: <meta name="viewport" content="width:device-width">
+    <link rel="" href="mobile.css" media="screen and max-width=939px">
+
+
+
+
+
+
+
+
+
+
+
+
+
+

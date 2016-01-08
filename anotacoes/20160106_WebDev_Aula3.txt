@@ -1,0 +1,97 @@
+
+PHP
+
+Abordagens para desenvolvimento:
+Progressive Enhancement (PE)
+x 
+Graceful Degradation (GD)
+
+PE -> faz um site basico, verifica compatibilidade de navegadores, vai melhorando a experiencia
+GD -> faz um site com os melhores recursos, depois verifica as compatibilidades de navegadores e vai desligando features incompativeis
+
+
+Javascript para melhorar a experiencia do usuario.
+
+PE bom -> Amazon
+PE ruim -> Google
+
+Voce consegue comprar um produto na Amazon mesmo com CSS e JS desligados.
+
+Post do Flavio:
+http://blog.caelum.com.br/aplicando-o-progressive-enhancement/
+
+Teste seu site no navegador de linha de comando: Lynx.
+
+Site para colar coisas e compartilhar: Pastie
+http://pastie.org/pastes/10672958/text
+
+Exemplo no Dabblet:
+http://goo.gl/DZWb4j
+
+Site para imagens aleatórias:
+http://lorempixel.com/city/640/480/
+
+Design Responsivo com Mobile First
+A ideia é ir aumentando a tela a partir do mobile e ver quando (subjetivamente) fica feio o layout (muito espaço do lado, por exmeplo). Ali é seu BREAKPOINT.
+Ex:
+@media(min-width:630px) {
+	.cores {
+		padding-left:40%;	
+	}
+}
+
+Inventário da tela: coisas que ela deve ter.
+
+Exemplo: site da BBC (para mobile e desktop - compare).
+
+Como zebrar uma tabela?
+table tr:nth-child(2n) {
+	background: gray;
+}
+
+
+Bootstrap 2 - desktop first
+Bootstrap 3 - mobile first
+Bootstrap 4 - está vindo....
+
+
+Adobe TopCoat - rival do Bootstrap
+
+Existem temas de bootstrap gratuitos e para vender.
+Ex: Tema de Bootstrap do Facebook
+
+Tags quentes do HTML5:
+   <input type="color">
+   <input type="date">
+   <input type="time">
+   <input type="email">
+   <input type="tel">
+
+Validação do HTML5: Required!
+<input type="email" required>
+
+Os Inputs aceitam expressão regular. (pattern)
+<input type="text" pattern="[A-Z]*">
+
+Colocar destaque no campo errado via CSS:
+input:invalid {
+	color:red;
+	font-size:50px;
+}
+
+Colocar como valor default.
+<input type="text" placeholder="valor default">
+
+
+Testar seu navegador com HTML5:
+http://html5test.com
+
+Site Posso usar tal comando no navegador?
+http://caniuse.com/
+
+
+
+
+
+
+

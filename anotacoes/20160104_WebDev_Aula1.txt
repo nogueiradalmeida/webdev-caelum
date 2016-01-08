@@ -1,0 +1,166 @@
+Flavio Almeida - flavio.almeida@caelum.com.br - @flaviohalmeida
+
+Foco:
+HTML5
+CSS3
+Design Responsivo
+JS (foco do outro curso)
+
+.
+
+Em SP, o salário de programador de FrontEnd superou de BackEnd.
+
+Estrutura -> HTML
+Estilo -> CSS
+Comportamento -> JavaScript
+
+Chrome tem mais ferramentas que o Firefox para desenvolvimento.
+
+Quircks Mode (se voce nao seguir a estrutura minima no HTML, cada navegador vai interpretar o HTML do jeito dele)
+
+Estrutura Mínima:
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+
+A tag HTML é como se fosse a marcação do seu marcador de texto.
+
+A tag <head> é usada para configurar paramêtros parao navegador.
+
+O padrão de enconding do Linux é UTF-8.
+
+Tag para destaque (heading): h1 (maior), h2 ... h6 (menor)
+
+O Google usa muito a tag H1 para indexar páginas.
+
+Uma tag de conteúdo do tipo Block ocupa a linha inteira.
+
+A tag <b> (bold) foi banida (deprecated) pela W3C. Essa tag não tem valor semântico. A nova tag é <strong>.
+
+<Figure> é ilustração e é uma tag do tipo Block.
+
+Existem 4 famílias de fontes:
+	1) Serif  (serifada, hastes prologandas, melhor para ler texto corrido)
+	2) Sans-Serif (sem serifado, sem prolongamento, normalmente para destaque)
+	3) Manospace
+	4) Fantasy
+
+No CSS tem o mecanismo de fallback, plano B, C, etc. caso a fonte nao exista no navegador cliente.
+
+Exemplo de Short Hand Property:
+
+seletor {
+	border-width: 10px;
+	border-style: solid;
+	border-color: blue;
+} 
+ou
+seletor {
+	border: 10px solid blue;
+}
+
+
+O atributo width funciona apenas para tag Blocked, mas nao funciona para tag Inline.
+Exemplo que fuciona:
+h1 {
+	border: solid 2px;
+	width: 500px;
+}
+
+
+Modelo de caixa (box-model):
+Conteúdo < Espaçamento (Padding) < Borda < Margem (Margin)
+Ex:
+h1 {
+	width: 500px;
+	padding-left: 50px;
+	border: solid 2px; 
+	margin-left: 100px;
+}
+
+Short Hand Property - Propriedades definidas no sentido horário (top, right, bottom, left):
+
+h1 {
+	padding: 50px 15px 20px 10px;
+}
+
+
+Listas ordenadas e não ordenadas
+
+A tag mais burra (sem semantica) do HTML: div. Apenas para estruturar/agrupar outras tags.
+
+Tipos de Seletores por:
+1) Tag (mais abrangente)
+	- ex: h1 {}
+2) Hierarquia (acumula)
+	- ex: div h1 {}
+3) Id (não pode ser repetido)
+	- ex: #rodape p {}
+4) Classe (por grupo, reutilizável)
+	- ex: .carnaval {}
+
+Color Highlighter - Plugin para colorir hexa colors no Sublime
+https://packagecontrol.io/packages/Color%20Highlighter
+
+O comando float descola o objeto do fluxo HTML. É uma técnica para colocar dois elementos blocks, um ao lado do outro, se houver espaço (largura) para ambos.
+Ex:
+#familia-pelho {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+A equipe de UX (User Experience) vai entregar um WireFrame com os requisitos de layout.
+A equipe de design (PhotoShop, CorelDraw) vai entregar um PSD com as fotos baseadas no WireFare.
+A equipe de FrontEnd vai escrever os htmls, css e scripts baseados no PSD.
+
+Tag <header> define o cabeçalho que aparece para o usuário. Não confundir com <head>, que é a tag de configurações que não aparece.
+
+A questão de que tags utilizar no HTML5 é fundada no sentido semântico das tags.
+A semântica vai ajudar na acessibilidade e nos robôs buscadores.
+
+
+O HTML5 tem:
+1) links primários (mais importantes - ex: links internos) 
+	<nav> -> agrupa os links internos como se fosse um DIV
+2) secundários (links externos).
+	
+Usando o seletor de classe é possível acumular mais de uma classe na mesma tag.
+Ex:
+<h2 class="carnaval2015 carnaval2016">
+
+Outra vantagem do seletor de classe é DESACOPLAR o html do CSS. 
+!!! O seletor de classe é o seletor mais indicado.
+
+Os navegadores tem um CSS default, cada um o seu tipo. Por isso, temos resultados diferentes. Uma solução é ZERAR (RESET) o CSS antes de iniciar o seu.
+Ex: Eric Meyer RESET CSS
+
+
+Como trocar uma tag Block por Inline ou vice-versa?
+Ex: li { display: inline; } ou { display: block; }
+
+Editor de HTML+CSS Online: http://dabblet.com/gist/df33c18516e81e38b940
+
+Alterando o seu posicionamento:
+position: relative; (seu objeto continua fazendo parte do fluxo html)
+	vs.
+position: absolute;  (seu objeto deixa de fazer parte do fluxo html)
+	vs.
+position: static; (opção default)
+	vs.
+position: fixed; (objeto sai do fluxo e fica congelado mesmo dando scroll na pagina)
+
+Tag <article> é uma unidade de informação confinada, podendo ter um <h1> por <article>.
+
+<input type="text"> --> faz autocomplete de formulario
+	vs.
+<input type="search">   --> nao faz autocomplete, pois nao faz sentido
+	vs.
+<input type="image" src="img/busca.png">
+
+Tag <section> para determinar uma area, por exemplo, de busca. Parece com a tag <div>, porem com valor semantico.
+
+ 

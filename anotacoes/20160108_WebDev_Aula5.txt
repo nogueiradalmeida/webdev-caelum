@@ -1,0 +1,120 @@
+
+Aula 5
+
+Alguns celulares não fazem cache acima de 24k e a biblioteca Jquery tem 30k. Fica pesado para o celular baixar a lib a cada acesso. Uma forma de não usar o JQuery e imitar o seletor $ é mostrada abaixo.
+
+var $ = document.querySelectorAll.bind(document);
+$("#p1").textContent = "lala";
+
+Dica: aprender preprocessador LESS ou SASS.
+
+Dica: ferramenta de Build: Grunt ou Gulp.
+
+Tecnologias populares hoje para backend: Node.js, PHP, Java e C#.
+
+OndeTrabalhar.com.br
+
+Hospedagem gratuita: openShift.com
+
+Versionamento: GIT
+
+Cursos da Alura
+
+Compre livros: http://www.casadocodigo.com.br/
+http://www.casadocodigo.com.br/products/livro-mean
+
+É possível (e não recomendado) alterar o estilo via JavaScript. Ex:
+$("p").CSS("background", "red");
+
+Quando for aplicar uma propriedade para o n-ésimo elemento, obrigatório começar com n+x ao invés de x+n (não funciona!).
+Ex:
+.painel-compacto li:nth-child(n+7) {
+	display: none;
+}
+
+É possível alterar o elemento de um site, usando a opção Inspecionar Elemento e depois duplo-clique no HTML do elemento.
+
+
+Função anônima no JavaScript.
+Ex: h2.onclick = function () {
+	alert('Sou uma função anônima');
+}
+
+
+No JQuery, o padrão é que a função equivalente ao JavaScript é sem o prefixo ON.
+Exemplos:
+	$('p').click()
+	$('p').mouseover()
+
+
+No JQuery, a funcao CLOSEST pega o pai mais próximo com o seletor informado.
+Ex: 
+$(".painel button").click(function(){
+	$(this).closest(".painel").removeClass("painel-compacto");
+});
+
+
+No JQuery, o THIS é o elemento cru do DOM, com todos os problemas de compatibilidade de navegadores.
+A alternativa é usar um wrapper JQuery no this. Ex: $(this)
+
+
+Vue.js
+Reactive Components for Modern Web Interfaces
+
+
+Duas maneiras de chamar a função alerta:
+$('p').click(alerta);  
+=  
+$('p').on('click',alerta);
+
+
+O JQuery tem um eco-sistema rico de plugins.
+Ex: inputmask-plugin
+
+Você pode colocar o prefixo data-xxxx em qualquer TAG HTML. É previsto pela W3C como uma forma de estender.
+Ex: <input data-mask="999.999.999-99" > 
+
+Moleques que estao na moda:
+
+	TJ Holowaychuk - moleque monstro de github
+	https://github.com/tj
+
+	Sindre Sorhus
+	https://github.com/sindresorhus
+
+	Zeno Rocha
+	https://zenorocha.com/
+
+
+WebSocket e Socket.IO - conexao persistente para sistemas em tempo real.
+
+Não dá para alterar via JavaScript da página pai uma outra página dentro de um IFRAME.
+
+Você pode utilizar iframe para integração com Google Maps.
+
+Como mostrar uma fonte específica não suportada por um navegador?
+Serviços web: TypeKit (pago) ou Google Web Fonts (gratuito).
+
+Site para detectar a fonte:
+https://www.myfonts.com/WhatTheFont/
+
+Fonte interessante e alternativa ao Arial: Nunito.
+https://www.google.com/fonts#QuickUsePlace:quickUse
+
+Uma forma de "inventar" o itálico de uma fonte:
+.italico {
+	font-style: oblique;
+}
+
+Você pode adicionar a fonte ao seu HTML: (cuidado com os FireWalls)
+<link href='https://fonts.googleapis.com/css?family=Nunito:400,700,300' rel='stylesheet' type='text/css'>
+
+
+
+sublime package control - turbinando seu SUBLIME
+
+Emmet - plugin HTML para Sublime
+
+Dicas do Emmet:
+! <tab>
+div.container>ul>li*3 <tab>
