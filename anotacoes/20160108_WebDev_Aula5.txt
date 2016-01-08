@@ -118,3 +118,79 @@ Emmet - plugin HTML para Sublime
 Dicas do Emmet:
 ! <tab>
 div.container>ul>li*3 <tab>
+
+
+Já tem mais gente navegando em celular do que em Desktop. (MobileFirst)
+Celulares tem limitações de requisições simultâneas.
+As redes 3g tem problema da latência.
+O 4g ataca bastante a questão da latência.
+Quanto mais imagens, scripts e recursos, maior a latência, pior experiência para o usuário.
+
+A Google adota o tempo de carregamento como critério de priorização no resultado orgânico do buscador.
+
+90% de problema de carregamento é FrontEnd, não BackEnd.
+
+Otimização é fundamental.
+
+Problemas:
+1) Latência: múltiplas requisições 
+	-> evitar colocando todos os arquivos de CSS num único arquivo (pela ferramenta de build. ex: gulp ou grunt)
+	-> evitar múltiplas imagens: 
+		a) colocar todas as imagens agrupadas numa única imagem (técnica de SPRITE - Google Faz) - Ex de ferramenta: Compass.
+		ref: http://tableless.com.br/css-sprites/
+		b) colocar a imagem em base64 dentro do HTML 
+2) Largura de Banda: 
+	a) Tá com GZIP habilitado no servidor (backend)?
+	   GZIP habilitado encurta a quantidade para trafegar de bytes entre cliente e servidor.
+	b) Above the Fold
+		Coloque o style nos diferentes pedaços do seu código, embutindo o CSS por página que é exibido naquele pedaço de HTML.
+	c) Arquivo Minificado - arquivos sem quebra-de-linha (usar ferramenta: uglify e 'yui compressor)
+	Site útil: http://refresh-sf.com/
+		ex: input[type="search"] {  -webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;-webkit-appearance: textfield;}
+	d) Otimização de imagens
+		x. Estratégias:
+			I)lossless = não perde qualidade. 
+				vs.
+			II) losy = perde qualidade
+
+		xx. i) Ex: retirar meta-dados das fotos (ferramenta: smush it! )
+			ii) machine-learning para deteriorar pontos da imagem que o olho humano não atenta
+				Ex: http://www.jpegmini.com/ 
+				Ex2: imageMin 
+				Ex3: tinyPNG
+				Ex4: https://kraken.io/web-interface
+		xxx. Priorize uso de SVG (vetor) ao invés de imagens.
+
+
+Display de Retina é de alta resolução e exige maior qualidade das imagens do seu site.
+" apresentam uma densidade de pixels suficiente para o olho humano não ser capaz de perceber a pixelação a uma distância padrão"
+
+
+Artigo:
+http://sergiolopes.org/media-queries-retina/
+
+Livro:
+https://retinafy.me/
+
+
+Google Page Speed:
+https://developers.google.com/speed/pagespeed/
+https://developers.google.com/speed/pagespeed/insights/
+
+
+Heat Map / mapa de calor
+Ex:
+Crazy Egg
+https://www.youtube.com/watch?v=v3f-2WG7ONc
+
+
+JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
+JWT.IO allows you to decode, verify and generate JWT.
+
+
+Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themable and extendable.
+
+
+
+
+
